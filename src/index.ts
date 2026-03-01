@@ -4,7 +4,7 @@ import { rateLimit } from "elysia-rate-limit";
 import { profilesRoutes } from "./routes/profiles";
 import { listedAccounts } from "./routes/listed_accounts";
 
-export default new Elysia()
+const app = new Elysia()
   .get("/", "GMDI LEADERBOARD API \nBy BlUhOl using ElysiaJS")
   .use(rateLimit({
     max:10,
@@ -34,6 +34,6 @@ Using ElysiaJS
   )
   .use(profilesRoutes)
   .use(listedAccounts)
-  .listen(3000);
 
 // console.log(`🦊 Server running at http://localhost:${app.server?.port}`);
+export default app;
