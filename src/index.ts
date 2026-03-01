@@ -34,6 +34,6 @@ Using ElysiaJS
   )
   .use(profilesRoutes)
   .use(listedAccounts)
-  .listen(3000);
+  // .listen(3000);
 
 // console.log(`🦊 Server running at http://localhost:${app.server?.port}`);
