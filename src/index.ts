@@ -3,7 +3,7 @@ import openapi from "@elysiajs/openapi";
 import { rateLimit } from "elysia-rate-limit";
 import { profilesRoutes } from "./routes/profiles";
 import { listedAccounts } from "./routes/listed_accounts";
-import { hardestLevels } from "./routes/hardest_levels";
+// import { hardestLevels } from "./routes/hardest_levels";
 import { cors } from "@elysiajs/cors";
 
 const app = new Elysia()
@@ -55,9 +55,9 @@ Using ElysiaJS
   )
   .use(profilesRoutes)
   .use(listedAccounts)
-  .use(hardestLevels)
-//   .listen(3000);
+  // .use(hardestLevels)
+  .listen(3000);
 
-// console.log(`🦊 Server running at http://localhost:${app.server?.port}`);
+console.log(`🦊 Server running at http://localhost:${app.server?.port}`);
 
 export default app;
