@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
 
-export const hardestLevels = new Elysia().get("/hardest_levels", async () => {
+export const hardestLevels = new Elysia().get("/hardest-levels", async () => {
   try {
     const res = await fetch(
       "https://pointercrate.com/api/v1/nationalities/ID/",
